@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = '/api/denote'
+const API_URL = import.meta.env.VITE_API_URL || '/api/denote';
 
 const api = axios.create({
   baseURL: API_URL,
