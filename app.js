@@ -7,9 +7,12 @@ const app=express();
 const colors=require('colors');
 
 // Load environment variables first
-dotenv.config({
-    path:'./config.env'
-});
+// In production (Render), env vars are set in dashboard, not config.env
+if (process.env.NODE_ENV !== 'production') {
+    dotenv.config({
+        path:'./config.env'
+    });
+}
 
 // CORS configuration - allows requests from frontend
 const allowedOrigins = [
