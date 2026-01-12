@@ -1,25 +1,71 @@
-<<<<<<< HEAD
-📚 Decentralized NotesApp
-A decentralized, peer-to-peer notes sharing platform built on IPFS via Pinata, enabling students to upload, access, and discover high-quality notes rated by the community.
-
-🚀 Features
-⚡ Decentralized Storage
-Notes are uploaded and pinned to IPFS through Pinata, ensuring censorship resistance, content integrity, and global accessibility.
-
-🔍 Smart Discovery System
-Find the most useful notes based on community ratings and popularity. Let the best content naturally surface to the top.
-
-📤 Upload & Share with Ease
-Students can upload notes by selecting their branch, semester, subject, and title — all indexed and stored on IPFS.
-
-⭐ Rating System
-Users can rate notes, helping others identify quality material. The rating system drives content visibility and feedback.
-
-📄 PDF Preview
-Preview notes directly in the app using public IPFS gateway links.
-
-🧠 No Central Server Lock-In
-Files are permanently hosted on IPFS as long as they are pinned — no dependency on centralized file storage.
-=======
 # DeNote
->>>>>>> 57be6d900a33e8e20d2a57416aaf2760d2530144
+
+DeNote is a **full-stack notes sharing application** that allows users to upload, discover, and access academic notes securely using a **Node.js + Express backend**, **MongoDB**, and **IPFS via Pinata**.
+
+---
+
+## 🚀 Features
+- User authentication using **JWT**
+- Upload and store notes via **IPFS (Pinata)**
+- Metadata stored in **MongoDB**
+- Secure backend with environment-based configuration
+- **Decentralized Storage** - Notes are permanently pinned to IPFS through Pinata
+- **Smart Discovery System** - Find notes based on community ratings and popularity
+- **Rating System** - Users can rate notes to identify quality material
+- **PDF Preview** - View notes directly using IPFS gateway links
+
+---
+
+## � Tech Stack
+- **Backend:** Node.js, Express
+- **Frontend:** React, Vite
+- **Database:** MongoDB Atlas
+- **Storage:** IPFS (Pinata)
+- **Auth:** JSON Web Tokens (JWT)
+
+---
+
+## ⚙️ Environment Variables
+Create `config.env` in the root directory:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secure_jwt_secret
+PINATA=your_pinata_jwt_token
+```
+
+---
+
+## ▶️ Run Locally
+
+### Backend
+```bash
+npm install
+npm start
+```
+Server runs on `http://localhost:5000`
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Frontend runs on `http://localhost:5173`
+
+---
+
+## 🚀 Deployment
+- **Backend:** Render / Railway / EC2
+- **Frontend:** Vercel / Netlify
+- Set environment variables in the deployment platform
+
+---
+
+## � Security Note
+Secrets and credentials are managed using environment variables and are **not committed** to the repository. The `config.env` file is included in `.gitignore`.
+
+---
+
+## 📄 License
+Open-source project for learning and educational purposes.
